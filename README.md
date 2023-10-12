@@ -1,4 +1,8 @@
 # Logical Operation
+```
+Jhagan B
+CSE - 212220040066
+```
 
 ## AIM:
 
@@ -43,10 +47,56 @@ Logic gates are the basic building blocks of any digital system. It is an electr
 ![image](https://user-images.githubusercontent.com/71547910/235332254-db13d222-1246-4b57-bbb2-3ab2287ccaa8.png)
 
 ## PROGRAM:
+```
+int bs0 = 0;         // variable for reading the pushbutton status
+int bs1 = 0;
+int bs2 = 0;         // variable for reading the pushbutton status
+int bs3 = 0;
+int bs4 = 0;         // variable for reading the pushbutton status
+int bs5 = 0;
+void setup() {
+  pinMode(13, OUTPUT);
+  pinMode(0, INPUT);
+  pinMode(1, INPUT);
+  pinMode(2, INPUT);
+  pinMode(3, INPUT);
+  pinMode(4, INPUT);
+  pinMode(5, INPUT);
+}
+void loop() {
 
+  bs0 = digitalRead(0);
+  bs1 = digitalRead(1);
+  bs2 = digitalRead(2);
+  bs3 = digitalRead(3);
+  bs4 = digitalRead(4);
+  bs5 = digitalRead(5);
+
+  if (bs4 == 0 && bs5 == 0) 
+  {
+      digitalWrite(13, bs0);
+  } 
+  else if (bs4 == 0 && bs5 == 1) 
+  {
+    
+    digitalWrite(13, bs1);
+  }
+   else if (bs4 == 1 && bs5 == 0) 
+  {
+    
+    digitalWrite(13, bs2);
+  }
+   else   if (bs4 == 1 && bs5 == 1) 
+  {
+      digitalWrite(13, bs3);
+  } 
+}
+```
 ## CIRCUIT DIAGRAM:
+![272861852-cb6584a9-1c4a-4701-96bf-9479581d8680](https://github.com/jhaganb/Logical-operation/assets/63654882/278e885f-c438-47d6-859e-a8b8b5fe2631)
 
 ## OUTPUT:
+![272861974-e247446a-2648-41e2-b3b3-d53b684b45e5](https://github.com/jhaganb/Logical-operation/assets/63654882/35a8bfcf-b04c-41fd-946b-3f9ca3a4b4d1)
 
 ## RESULT:
 
